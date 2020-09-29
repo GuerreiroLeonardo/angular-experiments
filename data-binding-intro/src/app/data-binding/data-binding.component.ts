@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
+  url: any = 'http://google.com'
+
   constructor() { }
 
   ngOnInit(): void {
