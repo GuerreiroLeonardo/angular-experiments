@@ -1,1 +1,55 @@
-<p>diretiva-ngif works!</p>
+<h5>*ngIf</h5>
+<ng-container *ngIf="cursos.length > 0; else elseTemplate">
+  <div>
+    Lista de Cursos Aqui:
+
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div>
+    Não existem cursos para serem listados
+  </div>
+</ng-template>
+
+
+<ng-container *ngIf="mostrarCursos; else elseTemplate">
+  <div>
+    Lista de Cursos Aqui:
+
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div>
+    Não existem cursos para serem listados
+  </div>
+</ng-template>
+<br><br>
+<button (click)="onMostrarCursos()">Mostrar Cursos</button>
+
+<h5>Hidden como alternativa</h5>
+
+<div [hidden]="mostrarCursos">
+  Lista de Cursos Aqui:
+
+</div>
+
+<div [hidden]="!mostrarCursos">
+  Não existem cursos para serem listados
+</div>
+
+<br><br>
+<button (click)="onMostrarCursos()">Mostrar Cursos</button>
+
+
+
+<ng-container *ngIf="cursos.length > 0; else elseTemplate">
+  <div>
+    Lista de Cursos Aqui:
+
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div>
+    Não existem cursos para serem listados
+  </div>
+</ng-template>
