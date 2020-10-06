@@ -3,13 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-diretivas-customizadas',
   templateUrl: './diretivas-customizadas.component.html',
-  styleUrls: ['./diretivas-customizadas.component.scss']
+  styleUrls: ['./diretivas-customizadas.component.scss'],
 })
 export class DiretivasCustomizadasComponent implements OnInit {
+  mostrarCursos: boolean = true;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  onMostrarCursos() {
+    this.mostrarCursos = !this.mostrarCursos;
   }
-
+  ngOnInit(): void {}
 }
